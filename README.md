@@ -1,6 +1,5 @@
 <div align="center">
 
-<!-- Put your poster here as assets/banner.png and it will show up -->
 <img src="assets/banner.png" alt="BTAJI Crew Research Lab" width="100%">
 
 # BTAJI Crew Research Lab
