@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="BTAJI Crew Research Lab" width="100%">
+<img src="assets/header.png" alt="BTAJI Crew Research Lab" width="100%">
 
 # BTAJI Crew Research Lab
 
