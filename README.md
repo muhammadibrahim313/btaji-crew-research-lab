@@ -53,13 +53,17 @@ More sessions are on the way. Star the repo to stay updated.
 
 ## Who Runs It
 
-**01. Muhammad Ibrahim Qasmi**
+**01. [Muhammad Ibrahim Qasmi](https://www.linkedin.com/in/ibrahimqasmi313/)**
 
 Muhammad Ibrahim Qasmi is the youngest 3x Kaggle Grandmaster, achieving this milestone at the age of 19. He is an ML researcher, data scientist, and machine learning competition expert focused on applied AI, research workflows, and helping students move from learning machine learning to doing real research.
 
-**02. Zulqarnain Ali**
+[LinkedIn](https://www.linkedin.com/in/ibrahimqasmi313/) | [Kaggle](https://www.kaggle.com/ibrahimqasimi)
+
+**02. [Zulqarnain Ali](https://www.linkedin.com/in/zulqarnainalipk/)**
 
 Zulqarnain Ali is a Kaggle Competition Expert, ML practitioner, and research mentor. His work focuses on machine learning, deep learning, medical AI, practical research guidance, and helping beginners understand complex ideas through clear examples.
+
+[LinkedIn](https://www.linkedin.com/in/zulqarnainalipk/) | [Kaggle](https://www.kaggle.com/johndoe2011)
 
 Guest hosts may join for future sessions.
 
