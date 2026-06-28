@@ -19,13 +19,12 @@ recordings/
 videos/
 sessions/**/recordings/
 sessions/**/recording*/
-topmate/**/raw/
-topmate/**/exports/
-topmate/**/drafts/
-youtube-upload/**/raw/
-youtube-upload/**/exports/
-youtube-upload/**/drafts/
-youtube-upload/**/renders/
+
+# Local publishing workspace
+topmate/
+youtube-upload/
+temp/
+tmp/
 
 *.mp4
 *.mov
