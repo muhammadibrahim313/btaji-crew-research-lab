@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="banner.png" alt="BTAJI Crew Research Lab Session 1" width="100%">
+
+</div>
+
 # Session 1 - What Research Is and How to Read a Paper
 
 > An introduction to ML research: what research really is, how a researcher thinks, and how to read a paper.
