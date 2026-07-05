@@ -84,7 +84,7 @@ Guest hosts may join for future sessions.
 - YouTube: [@Btajicrew](https://www.youtube.com/@Btajicrew)
 - Playlist: [How to Write Your First Research Paper](https://youtube.com/playlist?list=PLJPlXj5tLhiE&si=0679eGl6FdBYb1lH)
 
-If these sessions help you, share them with one friend who wants to start doing research.
+If these sessions help you, share them with your friends who wants to start doing research.
 
 ---
 
