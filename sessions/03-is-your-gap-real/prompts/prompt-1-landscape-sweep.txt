@@ -1,0 +1,379 @@
+BTAJI CREW RESEARCH LAB — SESSION 3
+THE LANDSCAPE SWEEP PROMPT  (reusable template + worked example)
+================================================================
+
+WHAT THIS IS
+A single prompt that makes a deep-research agent sweep an ENTIRE research field for
+you — every recent paper, the competitions, the benchmarks, and (the real prize) the
+empty space where a gap can live. You fill in the [BRACKETS], paste it into a
+deep-research tool, and it hands back a structured table you can skim.
+
+HOW TO USE IT
+1. Fill in EVERY [BRACKET] in PART 1. (PART 2 shows a complete filled-in example.)
+2. Paste the filled prompt into a deep-research tool — one at a time:
+      • Claude Research      • ChatGPT Deep Research      • Gemini Deep Research
+   Run the SAME filled prompt on 2–3 of them. Each finds papers the others miss.
+3. Save each tool's answer to its own file (e.g. claude.md, chatgpt.md, gemini.md).
+4. Merge them into one master table (see "AFTER YOU RUN IT" at the bottom).
+5. GOLDEN RULE: these tools invent papers. Trust nothing without a working link —
+   open ~5 of them yourself before you believe anything.
+
+Per-tool quirks (you don't change the prompt for these):
+   • ChatGPT will ask 1–3 questions first. Reply: "Use exactly the scope, sources, and
+     output format in my prompt. No further questions — proceed."
+   • Gemini shows an editable plan first — glance for a missing sub-area, then Start.
+     It may reformat the table; that's fine, the merge step tolerates it.
+   • Put every requirement in the prompt TEXT, never in a UI button.
+
+
+================================================================
+PART 1 — THE PROMPT   (fill in the [BRACKETS], then copy everything between the lines)
+================================================================
+----------------------------------------------------------------
+
+You are a SYSTEMATIC-REVIEW AGENT running an EXHAUSTIVE sweep of one research field —
+not writing a summary. Your output is the raw material for a literature-review master
+file, so breadth, structure, and verifiable links matter far more than nice prose.
+
+THREE NON-NEGOTIABLE RULES (obey them throughout):
+1. Output the findings as a table with EXACTLY the columns in OUTPUT 1 below, in that
+   exact order — do not rename, reorder, add, or drop columns.
+2. Every row must have a link you actually OPENED during this session. No opened link,
+   no row.
+3. Never invent, guess, or reconstruct a paper, title, author, DOI, arXiv ID, or link
+   from memory. Anything you cannot open goes in the "Unverified" list at the end —
+   never in the main table.
+
+THE FIELD (broad -> narrow):
+   Broad area:   [BROAD AREA — e.g. Machine Learning / Data Science]
+   Sub-area:     [SUB-AREA — e.g. Deep Learning / NLP / Computer Vision]
+   Narrow topic: [NARROW TOPIC — the specific thing to map, e.g. "ECG image digitization"]
+   In one line:  [ONE-LINE description of the narrow topic and why it matters]
+
+MISSION & STOP-CONDITION:
+This is a survey of an entire subfield. A 3–5 paper answer is a FAILURE. Begin with
+broad queries to map the landscape, then narrow into each sub-area in the coverage grid.
+Do NOT stop when you "have enough" — stop only when every sub-area has had its own search
+pass AND you can state what you did NOT find. Target >= 25 distinct real papers; more is
+better. If a sub-area genuinely has few papers, say so — never pad with off-topic work.
+
+TIME WINDOW:
+Prioritize [TIME WINDOW — e.g. the last 12 months, with the last 6 months highest
+priority]. You MAY include older LANDMARK / benchmark-defining papers, but put each
+paper's real year in the Year column so recent-vs-classic is obvious.
+
+COVERAGE GRID — give EACH of these its own search pass:
+   [LIST 5–8 SUB-AREAS / branches / tasks of your field]
+   Plus one topic-specific dimension to hunt for:
+   [THE SPECIFIC BREAKDOWN where gaps hide — e.g. "per-language behavior",
+    "per-degradation-type robustness", "low-resource / non-English settings"]
+
+SOURCES — search ALL of these, OPEN-ACCESS FIRST:
+1. Open access first: arXiv, PubMed Central (PMC), DOAJ, OpenReview, author/institution PDFs, GitHub.
+2. Top venues for this field: [KEY VENUES — e.g. ACL, EMNLP, NAACL, NeurIPS, ICLR, ICML — or CVPR/MICCAI/CinC].
+3. Competitions & challenge tracks: Kaggle, grand-challenge.org, PhysioNet, conference challenge tracks.
+4. Semantic Scholar, Google Scholar, reputable journals, and MSc/PhD theses.
+
+OPEN vs CLOSED ACCESS:
+Prefer papers a reader can open for FREE. When both an open and a paywalled version
+exist, link the OPEN one (e.g. the arXiv "abs" page, not the paywalled journal). You may
+include an important PAYWALLED paper, but then summarize it FROM THE ABSTRACT ONLY, mark
+it Paywalled, and invent no details you could not read.
+
+CITATION CONTRACT:
+Include a paper only if you opened its page this session. Every row needs a resolvable
+link — prefer a DOI (https://doi.org/...), an arXiv "abs" URL, or a PMC ID. Never
+reconstruct a citation from memory; never invent a DOI or arXiv ID; never output a
+placeholder link. Anything you believe exists but could not open goes in a separate
+"Unverified / could-not-confirm" list at the very end — NOT in the main table.
+
+OUTPUT 1 — MAIN TABLE (these exact columns, in this order):
+Title | First author et al. | Year | Venue | Access | Problem (1 line) | Contribution (1 line) | Limitation / Future work (1 line) | Metric + headline result | Dataset(s) | Paper link | Code link | Verified
+   - One paper per row; one short sentence per cell; no empty cells (write "unknown").
+   - Access = exactly one of: OpenAccess / Preprint / Paywalled / Code-only.
+   - "Metric + headline result" = the paper's ACTUAL reported number (e.g. "F1 0.87",
+     "SNR 12.15 dB", "accuracy 91.8%") — never a made-up or placeholder figure.
+   - Verified = "yes" ONLY for a page you actually opened this session. It means
+     "I opened this," NOT "I re-checked the link is live." Be honest.
+
+OUTPUT 2 — COMPETITIONS & BENCHMARKS (a SEPARATE table, or they get buried):
+Name | Year | Host / Venue | Task | Metric | Dataset size | Baseline score | Top score | Status (open/closed) | Link
+   Use ACTUAL scores read off the official results page — not estimates.
+
+OUTPUT 3 — SUB-THEMES MAP:
+List the sub-themes you actually found, each with a paper count (e.g. "low-resource: 4 papers").
+Name the key benchmarks/datasets and any beginner-friendly tooling. Then 2–3 sentences
+on CROWDED vs EMPTY: which sub-areas are saturated, which look thin.
+
+OUTPUT 4 — NEGATIVE SPACE (this is the whole point of the sweep):
+   (a) sub-areas with few or NO papers;
+   (b) claims that are contradicted or unreplicated across papers (e.g. very different
+       numbers reported for the same task);
+   (c) things everyone assumes but nobody has actually measured — specifically check:
+       [REPEAT YOUR TOPIC-SPECIFIC DIMENSION HERE].
+   For each candidate gap: give a confidence level (high / med / low), the evidence, and
+   flag what you DIRECTLY READ vs what you are INFERRING.
+
+VERIFICATION PASS — DO NOT SKIP:
+1. Set Verified = yes only for pages you genuinely opened; set "no" for anything you only
+   saw in a search snippet.
+2. Move every Verified = no row OUT of the main table into the "Unverified" list, each
+   with a one-line reason.
+3. End with an AUDIT line: "papers found / opened & verified / moved to unverified".
+
+HARD RULES (again, because they matter): only real papers you personally opened; every
+surviving row has a working link; prefer recent over famous; prefer open access;
+identical columns in identical order; never invent a paper, author, DOI, or link.
+
+----------------------------------------------------------------
+(end of prompt)
+
+
+================================================================
+PART 2 — WORKED EXAMPLE   (the same prompt, filled in for "LLM tokenization")
+================================================================
+This is what a filled-in prompt looks like — copy it straight into a deep-research tool,
+or use it as a model for your own field. (This example continues Session 2's topic:
+why some languages cost more tokens than others.)
+----------------------------------------------------------------
+
+You are a SYSTEMATIC-REVIEW AGENT running an EXHAUSTIVE sweep of one research field —
+not writing a summary. Your output is the raw material for a literature-review master
+file, so breadth, structure, and verifiable links matter far more than nice prose.
+
+THREE NON-NEGOTIABLE RULES (obey them throughout):
+1. Output the findings as a table with EXACTLY the columns in OUTPUT 1 below, in that
+   exact order — do not rename, reorder, add, or drop columns.
+2. Every row must have a link you actually OPENED during this session. No opened link,
+   no row.
+3. Never invent, guess, or reconstruct a paper, title, author, DOI, arXiv ID, or link
+   from memory. Anything you cannot open goes in the "Unverified" list at the end —
+   never in the main table.
+
+THE FIELD (broad -> narrow):
+   Broad area:   Machine Learning / Natural Language Processing
+   Sub-area:     Large Language Models (LLMs)
+   Narrow topic: LLM tokenization — the cost, efficiency, and fairness of how text is
+                 split into tokens, especially ACROSS LANGUAGES
+   In one line:  Tokenizers turn text into tokens before the model sees it; the way they
+                 split text makes some languages far more expensive and worse-served than
+                 English, which affects price, context length, and quality.
+
+MISSION & STOP-CONDITION:
+This is a survey of an entire subfield. A 3–5 paper answer is a FAILURE. Begin with
+broad queries to map the landscape, then narrow into each sub-area in the coverage grid.
+Do NOT stop when you "have enough" — stop only when every sub-area has had its own search
+pass AND you can state what you did NOT find. Target >= 25 distinct real papers; more is
+better. If a sub-area genuinely has few papers, say so — never pad with off-topic work.
+
+TIME WINDOW:
+Prioritize the last 12 months, with the last 6 months as highest priority. You MAY
+include older landmark papers (e.g. BPE, SentencePiece, the 2023 multilingual-cost
+papers), but put each paper's real year in the Year column so recent-vs-classic is obvious.
+
+COVERAGE GRID — give EACH of these its own search pass:
+   1. Tokenizer algorithms (BPE, WordPiece, Unigram, SentencePiece, byte-level BPE)
+   2. Multilingual token cost / the "token premium" — how many tokens the same meaning
+      takes across languages
+   3. Tokenizer fairness & low-resource / non-Latin-script languages
+   4. Tokenizer-free, byte-level, and character-level models (e.g. ByT5, CANINE, MEGABYTE)
+   5. Vocabulary size and its effect on scaling and efficiency
+   6. Tokenization's effect on downstream performance, reasoning, and arithmetic
+   7. Domain tokenization (code, math, biomedical, multilingual mixtures)
+   8. Tokenizer evaluation methods and benchmarks
+   Plus one topic-specific dimension to hunt for:
+   Per-language token cost measured cleanly with MEANING HELD FIXED (parallel/translated
+   sentences) across MANY tokenizers — especially for low-resource languages such as Urdu.
+
+SOURCES — search ALL of these, OPEN-ACCESS FIRST:
+1. Open access first: arXiv, ACL Anthology, OpenReview, DOAJ, author/institution PDFs, GitHub.
+2. Top venues for this field: ACL, EMNLP, NAACL, TACL, COLING, EACL, NeurIPS, ICLR, ICML.
+3. Competitions & challenge tracks: relevant shared tasks (e.g. WMT), Kaggle, workshop challenges.
+4. Semantic Scholar, Google Scholar, reputable journals, and MSc/PhD theses.
+
+OPEN vs CLOSED ACCESS:
+Prefer papers a reader can open for FREE. When both an open and a paywalled version
+exist, link the OPEN one (e.g. the arXiv "abs" page, not the paywalled journal). You may
+include an important PAYWALLED paper, but then summarize it FROM THE ABSTRACT ONLY, mark
+it Paywalled, and invent no details you could not read.
+
+CITATION CONTRACT:
+Include a paper only if you opened its page this session. Every row needs a resolvable
+link — prefer a DOI (https://doi.org/...), an arXiv "abs" URL, or an ACL Anthology ID.
+Never reconstruct a citation from memory; never invent a DOI or arXiv ID; never output a
+placeholder link. Anything you believe exists but could not open goes in a separate
+"Unverified / could-not-confirm" list at the very end — NOT in the main table.
+
+OUTPUT 1 — MAIN TABLE (these exact columns, in this order):
+Title | First author et al. | Year | Venue | Access | Problem (1 line) | Contribution (1 line) | Limitation / Future work (1 line) | Metric + headline result | Dataset(s) | Paper link | Code link | Verified
+   - One paper per row; one short sentence per cell; no empty cells (write "unknown").
+   - Access = exactly one of: OpenAccess / Preprint / Paywalled / Code-only.
+   - "Metric + headline result" = the paper's ACTUAL reported number (e.g. "Telugu ~5x the
+     tokens of English", "fertility 1.9", "F1 0.87") — never a made-up figure.
+   - Verified = "yes" ONLY for a page you actually opened this session. It means
+     "I opened this," NOT "I re-checked the link is live." Be honest.
+
+OUTPUT 2 — COMPETITIONS & BENCHMARKS (a SEPARATE table):
+Name | Year | Host / Venue | Task | Metric | Dataset size | Baseline score | Top score | Status (open/closed) | Link
+   Use ACTUAL scores read off the official results page — not estimates.
+
+OUTPUT 3 — SUB-THEMES MAP:
+List the sub-themes you actually found, each with a paper count (e.g. "byte-level models: 5 papers").
+Name the key benchmarks/datasets (e.g. FLORES-200, parallel corpora) and any
+beginner-friendly tooling (e.g. tiktoken, Hugging Face tokenizers). Then 2–3 sentences on
+CROWDED vs EMPTY: which sub-areas are saturated, which look thin.
+
+OUTPUT 4 — NEGATIVE SPACE (this is the whole point of the sweep):
+   (a) sub-areas with few or NO papers;
+   (b) claims that are contradicted or unreplicated across papers;
+   (c) things everyone assumes but nobody has actually measured — specifically check:
+       does any paper measure per-language token cost cleanly with meaning held fixed
+       (parallel sentences) across MANY tokenizers, especially for low-resource languages
+       like Urdu?
+   For each candidate gap: give a confidence level (high / med / low), the evidence, and
+   flag what you DIRECTLY READ vs what you are INFERRING.
+
+VERIFICATION PASS — DO NOT SKIP:
+1. Set Verified = yes only for pages you genuinely opened; set "no" for anything you only
+   saw in a search snippet.
+2. Move every Verified = no row OUT of the main table into the "Unverified" list, each
+   with a one-line reason.
+3. End with an AUDIT line: "papers found / opened & verified / moved to unverified".
+
+HARD RULES (again, because they matter): only real papers you personally opened; every
+surviving row has a working link; prefer recent over famous; prefer open access;
+identical columns in identical order; never invent a paper, author, DOI, or link.
+
+----------------------------------------------------------------
+(end of worked example)
+
+
+================================================================
+PART 3 — OUR RUNNING EXAMPLE   (the same prompt, filled in for ECG image digitization)
+================================================================
+This is the version we actually run in the session. Copy it straight into a deep-research tool.
+----------------------------------------------------------------
+
+You are a SYSTEMATIC-REVIEW AGENT running an EXHAUSTIVE sweep of one research field —
+not writing a summary. Your output is the raw material for a literature-review master
+file, so breadth, structure, and verifiable links matter far more than nice prose.
+
+THREE NON-NEGOTIABLE RULES (obey them throughout):
+1. Output the findings as a table with EXACTLY the columns in OUTPUT 1 below, in that
+   exact order — do not rename, reorder, add, or drop columns.
+2. Every row must have a link you actually OPENED during this session. No opened link,
+   no row.
+3. Never invent, guess, or reconstruct a paper, title, author, DOI, arXiv ID, or link
+   from memory. Anything you cannot open goes in the "Unverified" list at the end —
+   never in the main table.
+
+THE FIELD (broad -> narrow):
+   Broad area:   Machine Learning / Deep Learning
+   Sub-area:     Medical signals / ECG (electrocardiogram)
+   Narrow topic: ECG image digitization — turning a photo or scan of a PAPER ECG back
+                 into a clean digital 12-lead signal (reconstruct the waveform)
+   In one line:  Hospitals hold billions of paper ECGs; they are invisible to AI until
+                 digitized, and it is unclear which kinds of image damage break the pipeline.
+
+MISSION & STOP-CONDITION:
+This is a survey of an entire subfield. A 3–5 paper answer is a FAILURE. Begin with
+broad queries to map the landscape, then narrow into each sub-area in the coverage grid.
+Do NOT stop when you "have enough" — stop only when every sub-area has had its own search
+pass AND you can state what you did NOT find. Target >= 25 distinct real papers; more is
+better. If a sub-area genuinely has few papers, say so — never pad with off-topic work.
+
+TIME WINDOW:
+Prioritize the last 12 months, with the last 6 months as highest priority. You MAY
+include older landmark papers (the PhysioNet / George B. Moody Challenge 2024, ECG-Image-Kit),
+but put each paper's real year in the Year column so recent-vs-classic is obvious.
+
+COVERAGE GRID — give EACH of these its own search pass:
+   1. Disease / arrhythmia classification
+   2. ECG as a digital biomarker (low LVEF, future AF, long-QT)
+   3. Foundation / self-supervised ECG models
+   4. ECG image digitization  (go DEEPEST here — this is the focus)
+   5. Denoising / signal quality
+   6. Generation / synthesis (GAN, diffusion)
+   7. Single-lead / wearable ECG
+   8. Explainability / fairness / generalization
+   Plus one topic-specific dimension to hunt for:
+   Per-degradation-type behavior in digitization: clean, color scan, B/W scan, mobile
+   photo, photo-of-screen, stained, damaged, moldy. Note any paper that reports results
+   BROKEN DOWN by image/degradation type versus a single overall score.
+
+SOURCES — search ALL of these, OPEN-ACCESS FIRST:
+1. Open access first: arXiv, PubMed Central (PMC), PhysioNet, DOAJ, author/institution PDFs, GitHub.
+2. Top venues: Computing in Cardiology (CinC), EMBC, MICCAI, NeurIPS, ICLR, CHIL, ML4H.
+3. Competitions & challenge tracks: PhysioNet / George B. Moody Challenge, Kaggle, grand-challenge.org.
+4. Semantic Scholar, Google Scholar, reputable journals, and MSc/PhD theses.
+
+OPEN vs CLOSED ACCESS:
+Prefer papers a reader can open for FREE. When both an open and a paywalled version
+exist, link the OPEN one (e.g. the arXiv "abs" page, not the paywalled journal). You may
+include an important PAYWALLED paper, but then summarize it FROM THE ABSTRACT ONLY, mark
+it Paywalled, and invent no details you could not read.
+
+CITATION CONTRACT:
+Include a paper only if you opened its page this session. Every row needs a resolvable
+link — prefer a DOI (https://doi.org/...), an arXiv "abs" URL, or a PMC ID. Never
+reconstruct a citation from memory; never invent a DOI or arXiv ID; never output a
+placeholder link. Anything you believe exists but could not open goes in a separate
+"Unverified / could-not-confirm" list at the very end — NOT in the main table.
+
+OUTPUT 1 — MAIN TABLE (these exact columns, in this order):
+Title | First author et al. | Year | Venue | Access | Problem (1 line) | Contribution (1 line) | Limitation / Future work (1 line) | Metric + headline result | Dataset(s) | Paper link | Code link | Verified
+   - One paper per row; one short sentence per cell; no empty cells (write "unknown").
+   - Access = exactly one of: OpenAccess / Preprint / Paywalled / Code-only.
+   - "Metric + headline result" = the paper's ACTUAL reported number (e.g. "SNR 12.15 dB",
+     "SNR 19.65 dB on real scans") — and note if it is overall or PER degradation type.
+   - Verified = "yes" ONLY for a page you actually opened this session. It means
+     "I opened this," NOT "I re-checked the link is live." Be honest.
+
+OUTPUT 2 — COMPETITIONS & BENCHMARKS (a SEPARATE table):
+Name | Year | Host / Venue | Task | Metric | Dataset size | Baseline score | Top score | Status (open/closed) | Link
+   Use ACTUAL scores read off the official results page — not estimates.
+
+OUTPUT 3 — SUB-THEMES MAP:
+List the sub-themes you actually found, each with a paper count. Name the key benchmarks
+(PhysioNet 2024) and beginner tooling (ECG-Image-Kit, ECG-Image-Database). Then 2–3
+sentences on CROWDED vs EMPTY.
+
+OUTPUT 4 — NEGATIVE SPACE (this is the whole point of the sweep):
+   (a) sub-areas with few or NO papers;
+   (b) claims that are contradicted or unreplicated (very different SNR for the same task);
+   (c) things everyone assumes but nobody has measured — specifically: does ANY method
+       report reconstruction quality (SNR) broken down PER degradation type, PER method,
+       and does a fix that helps distorted photos HURT clean scans?
+   For each candidate gap: give a confidence level (high / med / low), the evidence, and
+   flag what you DIRECTLY READ vs what you are INFERRING.
+
+VERIFICATION PASS — DO NOT SKIP:
+1. Set Verified = yes only for pages you genuinely opened; "no" for search-snippet-only.
+2. Move every Verified = no row OUT of the main table into the "Unverified" list, with a reason.
+3. End with an AUDIT line: "papers found / opened & verified / moved to unverified".
+
+HARD RULES: only real papers you personally opened; every surviving row has a working link;
+prefer recent over famous; prefer open access; identical columns in identical order;
+never invent a paper, author, DOI, or link.
+
+----------------------------------------------------------------
+(end of ECG example)
+
+
+================================================================
+AFTER YOU RUN IT
+================================================================
+1. MERGE. Put your saved files in one folder and ask an AI (Claude Code, or a normal
+   Claude / ChatGPT chat) to:
+   "Merge these research tables into one. Dedupe by title (keep the best working link).
+    Column names/order will differ across tools — map them by meaning, don't drop rows.
+    Sort newest first. Then list the sub-themes with counts. If you have web access,
+    open each link and mark whether it resolves; if not, say network was unavailable."
+
+2. VERIFY BY HAND. Open ~5 links yourself — especially the ones that best support your
+   gap. Dead link, or it opens a DIFFERENT paper? Delete that row.
+
+3. FIND THE EMPTY SPACE. Read the master file for ABSENCE: scan the "Limitation /
+   Future work" column and the sub-areas with few/no papers. That is where a gap hides.
+
+4. VALIDATE the gap with the second (skeptical) prompt — see deep-research-prompts.md.

@@ -8,7 +8,7 @@
 
 A free, beginner-friendly research series for students who want to move from reading papers to finding gaps, asking research questions, and writing their first paper.
 
-![Sessions](https://img.shields.io/badge/sessions-2-8B1A1A)
+![Sessions](https://img.shields.io/badge/sessions-3-8B1A1A)
 ![Language](https://img.shields.io/badge/language-Urdu-1A1A18)
 ![For](https://img.shields.io/badge/for-beginners-2E7D32)
 ![Slides](https://img.shields.io/badge/slides-free%20to%20use-555)
@@ -46,8 +46,9 @@ If you are new, follow the sessions in order:
 
 | # | Session | Focus | Date | Watch | Slides | Notes |
 |:-:|---------|-------|:----:|:-----:|:------:|:-----:|
-| 01 | **What Research Is and How to Read a Paper** | Research mindset, paper reading, limitations vs gaps | 21 Jun 2026 | [Video](https://youtu.be/IMJx7ECaIEk) | [PDF](sessions/01-first-research-paper/slides.pdf) | [Read](sessions/01-first-research-paper/) |
-| 02 | **Finding Your Gap, Literature Review, and Research Question** | Idea, hypothesis, literature review, gap, research question | 27 Jun 2026 | [Video](https://www.youtube.com/watch?v=fiJni4jwVuo&list=PLJPlXj5tLhiE&index=6) | [PDF](sessions/02-finding-research-gap/slides.pdf) | [Read](sessions/02-finding-research-gap/) |
+| 01 | **What Research Is and How to Read a Paper** | Research mindset, paper reading, limitations vs gaps | 21 Jun 2026 | [Video](https://youtu.be/IMJx7ECaIEk) | [PDF](sessions/01-first-research-paper/session-1-slides.pdf) | [Read](sessions/01-first-research-paper/) |
+| 02 | **Finding Your Gap, Literature Review, and Research Question** | Idea, hypothesis, literature review, gap, research question | 27 Jun 2026 | [Video](https://www.youtube.com/watch?v=fiJni4jwVuo&list=PLJPlXj5tLhiE&index=6) | [PDF](sessions/02-finding-research-gap/session-2-slides.pdf) | [Read](sessions/02-finding-research-gap/) |
+| 03 | **Is Your Gap Real? Finding and Validating a Research Gap** | Where ideas come from, narrowing, Google Scholar, AI sweep, verifying papers, gap validation | 3 Jul 2026 | [Video](https://youtu.be/lGJdD1jZDdo) | [PPTX](sessions/03-is-your-gap-real/session-3-slides.pptx) | [Read](sessions/03-is-your-gap-real/) |
 
 More sessions are on the way. Star the repo to stay updated.
 

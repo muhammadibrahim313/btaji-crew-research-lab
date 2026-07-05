@@ -24,7 +24,7 @@
 
 ## Slides
 
-[slides.pdf](slides.pdf)
+[session-1-slides.pdf](session-1-slides.pdf)
 
 ## What we covered
 

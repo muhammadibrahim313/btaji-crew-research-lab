@@ -1,0 +1,70 @@
+BTAJI CREW RESEARCH LAB — SESSION 3
+THE MERGE PROMPT   (paste into Claude Code)
+================================================================
+
+WHAT THIS IS
+The third prompt. After you run Prompt 1 (the sweep) on several tools and save each
+answer, this one collapses all of them into ONE clean master table you can skim. Real
+tool outputs are messy, so this prompt is written to be tolerant of that.
+
+HOW TO USE IT
+1. Save each tool's answer under a deep-searches/ folder, one subfolder per tool
+   (for example: claude/, chatgpt/, gemini/, kimi/, genspark/, manus/).
+2. Open Claude Code in the folder that contains deep-searches/.
+3. Paste the prompt below. The merged, deduped table is written to master-file.md.
+4. Then verify by hand: open about 5 links and delete any that do not resolve.
+
+
+================================================================
+THE PROMPT   (copy everything between the lines)
+================================================================
+----------------------------------------------------------------
+
+I have deep-research sweeps of the same field saved in the deep-searches/ folder, one
+subfolder per tool. Merge them into one master file, master-file.md, in this folder.
+
+The inputs are MESSY, so be tolerant and do not drop data:
+- One subfolder per tool (for example claude/, chatgpt/, gemini/, kimi/, genspark/, manus/).
+- Some files are EMPTY (that tool's output was saved in another format). Skip empty files.
+- Some tools SPLIT their output into several files (for example manus/ may hold
+  output_main_table.md, output_competitions_table.md, output_negative_space_analysis.md,
+  output_sub_themes_map.md). Read all of them and combine.
+- Some outputs are HTML, not markdown (for example a Gemini .html export). Extract the
+  table rows from the HTML.
+- Column names and order WILL differ across tools. Map them by MEANING. Never drop a row
+  just because a header is named differently.
+
+Go through EVERY tool's real output under deep-searches/, then write master-file.md with:
+
+1. MASTER TABLE, columns exactly:
+   Title | First author et al. | Year | Venue | Access | Problem | Contribution | Limitation / Future work | Metric + result | Paper link | Code | FoundBy | Verified
+   - Dedupe by normalized title (ignore case, punctuation, and trailing version like v1/v2)
+     and by DOI/arXiv id. Merge duplicates into ONE row: keep the most complete cells and
+     the best link (DOI, then arXiv abs, then PMC, then other).
+   - FoundBy = the tools that reported that paper. A paper found by several tools is a
+     strong signal it is real.
+   - Sort newest first. One short sentence per cell; "unknown" for missing; "none in
+     source" if a source gave no link.
+
+2. COMPETITIONS table (dedupe by name and year): Name | Year | Host | Task | Metric | Status | Link.
+
+3. SUB-THEMES with paper counts, and a NEGATIVE-SPACE section listing candidate gaps.
+
+4. LINK CHECK. If you have web access, open each link and set Verified to yes or no
+   honestly. If you do NOT have web access, set Verified = "no (verify by hand)" for all
+   rows and say network was unavailable. Never confirm a link you did not actually open.
+
+5. AUDIT line at the end: total unique papers / how many found by 2+ tools / how many have a link.
+
+Do not invent, edit, or "fix" any paper's details. Only extract, merge, dedupe, sort,
+and (where possible) check links.
+
+----------------------------------------------------------------
+(end of prompt)
+
+
+================================================================
+REMEMBER
+================================================================
+The merge is fast. The judgement is yours. A paper found by one tool with a shaky link
+is your prime hallucination suspect. Click a few links yourself before you trust the table.

@@ -1,0 +1,185 @@
+BTAJI CREW RESEARCH LAB — SESSION 3
+THE GAP VALIDATION PROMPT   (reusable template + worked examples)
+================================================================
+
+WHAT THIS IS
+The second prompt. After Prompt 1 (the sweep) helps you spot a candidate gap, this
+one checks, honestly, whether that gap is already filled, BEFORE you spend months on
+it. It acts as a skeptical reviewer whose job is to try to kill your idea.
+
+HOW TO USE IT
+1. Write your candidate gap as one or two sentences, in the shape
+   "Everyone did X, but nobody did Y, because of Z".
+2. Fill in the [BRACKETS] in PART 1. (PART 2 and PART 3 show filled examples.)
+3. Run it FRESH, in a new chat, ideally on a DIFFERENT tool than the one that first
+   suggested the gap, so the model is not just defending its own earlier answer.
+4. Read the verdict: OPEN, PARTIALLY taken, or already DONE (see the bottom).
+5. GOLDEN RULE stays the same: only trust papers with a working link you can open.
+
+
+================================================================
+PART 1 — THE PROMPT   (fill in the [BRACKETS], then copy everything between the lines)
+================================================================
+----------------------------------------------------------------
+
+You are a SKEPTICAL, SENIOR PEER REVIEWER. I have a candidate research gap and I am
+about to spend months on it. Your job is NOT to encourage me. It is to try hard to
+PROVE the gap is already filled, before I commit. Assume it has probably been done,
+and hunt for the paper that did it.
+
+MY CANDIDATE GAP:
+[WRITE YOUR GAP in one or two sentences, in the shape:
+ "Everyone did X, but nobody did Y, because of Z"]
+
+FIELD:
+[the field, plus its main benchmark and metric if there is one, so you know where to look]
+
+STEPS:
+1. Search hard across arXiv, Papers With Code, OpenReview, Semantic Scholar, Google
+   Scholar, ACL Anthology or the venues for this field, plus competition and challenge
+   write-ups and MSc/PhD theses, for any paper that already does this, or comes close.
+2. Look SPECIFICALLY for near-misses that only PARTIALLY close it. A naive gap looks
+   uninformed if it misses these. Find the CURRENT state, not the state from two years ago.
+3. Label each close paper:
+   - DIRECT: it already does essentially my study. My gap is not open.
+   - PARTIAL: it does some of it. Name the exact piece it leaves undone.
+   - ADJACENT: same area, but does not address my gap.
+4. Give an honest verdict.
+
+EVIDENCE STANDARD (this stops you inventing a convenient match): any paper you cite as
+DIRECT or PARTIAL must have BOTH a resolvable link AND a short direct quote or the exact
+figure/table number where the result appears. If you cannot produce that, list it as a
+"lead to check", not as evidence. Do not let a lead change the verdict.
+
+RETURN, in this order:
+- VERDICT: one of "OPEN", "PARTIALLY taken", or "already DONE".
+- EVIDENCE TABLE:
+  Paper | Month/Year | Link (resolvable) | Closeness (DIRECT/PARTIAL/ADJACENT) | Quote or figure/table ref | What they did vs what I want
+- THE CLOSEST PAPER: 3 lines. Exactly what it does, and precisely how my study would
+  still differ (or not).
+- IF OPEN or PARTIALLY taken: rewrite my gap tighter as
+  "Everyone did X, but nobody did Y, because Z", narrowed to survive the near-misses you found.
+- IF already DONE: name the paper that closes it, and suggest one nearby angle still open.
+
+HARD RULES: only cite real papers whose page you actually opened this session; never
+invent a paper to fill the table; if you find nothing, say "I found no direct work on
+this", which is a valid and useful answer. Be honest, not encouraging. Do not pad. If,
+after genuinely trying to kill this gap, you cannot find a paper that does it, say so
+clearly. That is your validated gap.
+
+----------------------------------------------------------------
+(end of prompt)
+
+
+================================================================
+PART 2 — WORKED EXAMPLE   (filled in for an LLM tokenization gap)
+================================================================
+----------------------------------------------------------------
+
+You are a SKEPTICAL, SENIOR PEER REVIEWER. I have a candidate research gap and I am
+about to spend months on it. Your job is NOT to encourage me. It is to try hard to
+PROVE the gap is already filled, before I commit. Assume it has probably been done,
+and hunt for the paper that did it.
+
+MY CANDIDATE GAP:
+Everyone measures how many tokens a language costs, but nobody has measured token cost
+cleanly across MANY tokenizers with the meaning held fixed (the same parallel sentences),
+especially for low-resource languages like Urdu, because there is no clean parallel
+benchmark for it.
+
+FIELD:
+LLM tokenization and multilingual NLP. Relevant benchmarks: parallel corpora such as
+FLORES-200; tokenizer fertility and token-count comparisons.
+
+STEPS:
+1. Search hard across arXiv, ACL Anthology, Papers With Code, OpenReview, Semantic
+   Scholar, and Google Scholar, plus theses, for any paper that already does this, or
+   comes close.
+2. Look SPECIFICALLY for near-misses that only PARTIALLY close it (for example papers
+   that compare token counts across languages but for only ONE tokenizer, or without
+   holding meaning fixed). Find the CURRENT state, not the state from two years ago.
+3. Label each close paper DIRECT, PARTIAL (name the missing piece), or ADJACENT.
+4. Give an honest verdict.
+
+EVIDENCE STANDARD: any paper you cite as DIRECT or PARTIAL must have BOTH a resolvable
+link AND a short direct quote or the exact figure/table number where the result appears.
+If you cannot produce that, list it as a "lead to check", not as evidence.
+
+RETURN, in this order:
+- VERDICT: one of "OPEN", "PARTIALLY taken", or "already DONE".
+- EVIDENCE TABLE:
+  Paper | Month/Year | Link | Closeness (DIRECT/PARTIAL/ADJACENT) | Quote or figure/table ref | What they did vs what I want
+- THE CLOSEST PAPER: 3 lines on what it does and how mine still differs.
+- IF OPEN or PARTIALLY taken: rewrite my gap tighter as "Everyone did X, but nobody did
+  Y, because Z", narrowed to survive the near-misses.
+- IF already DONE: name the paper that closes it, and suggest one nearby open angle.
+
+HARD RULES: only real papers with working links you opened this session; never invent a
+paper; "I found no direct work on this" is a valid answer. Be honest, not encouraging. Do not pad.
+
+----------------------------------------------------------------
+(end of worked example)
+
+
+================================================================
+PART 3 — OUR RUNNING EXAMPLE   (filled in for the ECG per-type robustness gap)
+================================================================
+This is the version we validate live in the session.
+----------------------------------------------------------------
+
+You are a SKEPTICAL, SENIOR PEER REVIEWER. I have a candidate research gap and I am
+about to spend months on it. Your job is NOT to encourage me. It is to try hard to
+PROVE the gap is already filled, before I commit. Assume it has probably been done,
+and hunt for the paper that did it.
+
+MY CANDIDATE GAP:
+Every published ECG image-digitization method headlines a single overall SNR, so nobody
+has run a systematic PER-METHOD, PER-DEGRADATION-TYPE robustness study, showing which
+degradation types (clean scan, B/W scan, mobile photo, photo-of-screen, stained,
+damaged, moldy) actually break a given pipeline, and whether a fix that helps distorted
+photos HURTS clean scans.
+
+FIELD:
+ECG image digitization (deep learning). Benchmark: the George B. Moody / PhysioNet
+Challenge 2024. Metric: SNR in dB.
+
+STEPS:
+1. Search hard across arXiv, PubMed Central, PhysioNet, Papers With Code, OpenReview,
+   Semantic Scholar, Google Scholar, Computing in Cardiology proceedings, and Kaggle or
+   grand-challenge write-ups and theses, for any paper that already does this, or comes close.
+2. Look SPECIFICALLY for near-misses: challenge ORGANIZERS who report aggregate per-image-type
+   scores, and 2025 papers validating digitizers on REAL (not synthetic) hospital scans with
+   per-subcategory results. Find the CURRENT state, not the 2023 state.
+3. Label each close paper DIRECT, PARTIAL (name the missing piece), or ADJACENT.
+4. Give an honest verdict.
+
+EVIDENCE STANDARD: any paper you cite as DIRECT or PARTIAL must have BOTH a resolvable
+link AND a short direct quote or the exact figure/table number where the per-type result
+appears. If you cannot produce that, list it as a "lead to check", not as evidence.
+
+RETURN, in this order:
+- VERDICT: one of "OPEN", "PARTIALLY taken", or "already DONE".
+- EVIDENCE TABLE:
+  Paper | Month/Year | Link | Closeness (DIRECT/PARTIAL/ADJACENT) | Quote or figure/table ref | What they did vs what I want
+- THE CLOSEST PAPER: 3 lines on what it does and how mine still differs.
+- IF OPEN or PARTIALLY taken: rewrite my gap tighter (for example "per method, per type,
+  on real scans, tied to downstream diagnostic error").
+- IF already DONE: name the paper that closes it, and suggest one nearby open angle.
+
+HARD RULES: only real papers with working links you opened this session; never invent a
+paper; "I found no direct work on this" is a valid answer. Be honest, not encouraging. Do not pad.
+
+----------------------------------------------------------------
+(end of ECG example)
+
+
+================================================================
+READING THE VERDICT
+================================================================
+OPEN               Nobody did it. Go.
+PARTIALLY taken    Someone did part of it. Narrow your gap to the exact piece they left,
+                   then you are ready.
+already DONE       It exists. Pick your next candidate from the sweep and repeat. This is
+                   normal. It often takes two or three tries.
+
+A rejected gap is not a failure. It just saved you three months.
