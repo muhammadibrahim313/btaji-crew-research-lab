@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\definecolor{cProblem}{RGB}{192,26,26}
+\definecolor{cMethod}{RGB}{15,118,110}
+\definecolor{cResult}{RGB}{30,122,60}
+\definecolor{cGap}{RGB}{194,120,0}
+
+\begin{document}
+
+\section*{Research Paper Template: What Goes in Each Section}
+
+\textit{Use this template to see what belongs in each part of a research paper. The colors show the job of each idea. The running example is ECG image digitization: turn a photo or scan of a paper ECG into a clean digital signal.}
+
+\fbox{\textbf{How to read the colors}}
+
+\begin{itemize}
+\item \colorbox{cProblem}{\textcolor{white}{\textbf{ Problem }}} \textcolor{cProblem}{red} marks the problem you solve.
+\item \colorbox{cMethod}{\textcolor{white}{\textbf{ Method }}} \textcolor{cMethod}{teal} marks the method or idea.
+\item \colorbox{cResult}{\textcolor{white}{\textbf{ Result }}} \textcolor{cResult}{green} marks the result or claim.
+\item \colorbox{cGap}{\textcolor{white}{\textbf{ Gap }}} \textcolor{cGap}{orange} marks the gap in past work.
+\end{itemize}
+
+\fbox{\textbf{The whole paper at a glance}}
+
+\begin{tabular}{ll}
+\toprule
+\textbf{Section} & \textbf{Its one job} \\
+\midrule
+1. Title & Name the work in one clear line \\
+2. Abstract & The whole paper in one short paragraph \\
+3. Introduction & Walk from the big picture to your question \\
+4. Related Work & Show past work and where you fit \\
+5. Methodology & Explain your method so others can rebuild it \\
+6. Experiments & Describe the test setup \\
+7. Results & Report what the numbers say \\
+8. Discussion & Explain what the results mean \\
+9. Limitations & Say what your work does not cover \\
+10. Conclusion & Wrap up and point forward \\
+11. References & List every source you cited \\
+\bottomrule
+\end{tabular}
+
+\section{Title}
+\textit{Purpose: name the paper so a reader knows the topic in one line.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item The \textcolor{cMethod}{method or idea} and the \textcolor{cProblem}{problem} it solves.
+\item Keep it short, plain, and specific. No hype words.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+
+\textcolor{cMethod}{Robust ECG Image Digitization} \textcolor{cProblem}{Under Common Image Damage}: A Method by Method Benchmark on PhysioNet 2024
+
+\section{Abstract}
+\textit{Purpose: give the whole paper in one short paragraph.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item One or two lines of context, then the \textcolor{cProblem}{problem}.
+\item What you did (the \textcolor{cMethod}{method}) and the main \textcolor{cResult}{result}.
+\item Aim for 4 to 6 short sentences. No citations, no tables.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+
+\textcolor{cProblem}{Paper ECG scans often carry creases, shadows, and ink smudges.} These flaws can lower the quality of the digital signal. \textcolor{cGap}{Past work reports one overall score and does not show how each type of damage changes the result.} \textcolor{cMethod}{We test three digitization methods on PhysioNet 2024 and group the images by damage type.} \textcolor{cResult}{We find that the best method changes with the damage type, and no single method wins on every case.}
+
+\section{Introduction}
+\textit{Purpose: walk the reader from the big picture down to your exact question.}
+
+\fbox{\textbf{What to put here}} An introduction is built in a clear order. Follow these steps.
+
+\begin{itemize}
+\item \textbf{Step 1. Wide context.} Say why the area matters. \\
+ECG: many clinics still keep heart records only on paper.
+\item \textbf{Step 2. The problem.} Name the specific pain. \\
+ECG: \textcolor{cProblem}{scanned paper ECGs are often damaged by creases, shadows, and smudges.}
+\item \textbf{Step 3. What is missing.} Say what current work does not do. \\
+ECG: current tools report a single overall accuracy score.
+\item \textbf{Step 4. The gap.} Name the gap in one clear line. \\
+ECG: \textcolor{cGap}{no study shows if accuracy holds up for each separate type of damage.}
+\item \textbf{Step 5. The question.} Turn the gap into a question. \\
+ECG: does digitization accuracy hold up for each type of image damage, method by method?
+\item \textbf{Step 6. The contributions.} List what you add.
+\begin{itemize}
+\item \textcolor{cMethod}{We benchmark three digitization methods, one damage type at a time.}
+\item \textcolor{cResult}{We report SNR in dB for each method and each damage type.}
+\item \textcolor{cResult}{We show which method to trust for which kind of damage.}
+\end{itemize}
+\end{itemize}
+
+\section{Related Work}
+\textit{Purpose: show what others did and where your work sits.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item Group the prior \textcolor{cMethod}{methods} and say what each one does.
+\item Give the limit of each group, then point to the \textcolor{cGap}{gap}.
+\item Compare the works. Do not just list them one by one.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+
+\textcolor{cMethod}{Early methods trace the ECG line with hand written rules.} \textcolor{cMethod}{Newer methods use deep networks to read the signal.} Both report one overall score on clean or lightly damaged images. \textcolor{cGap}{None breaks the score down by damage type, which is the gap we fill.}
+
+\section{Methodology}
+\textit{Purpose: explain your method so another person could rebuild it.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item The \textcolor{cMethod}{method} step by step, with inputs and outputs.
+\item The model or pipeline, and the settings you used.
+\item Enough detail that a reader could repeat your work.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+
+\textcolor{cMethod}{Our pipeline has five steps: load the ECG image, remove the printed grid, find the signal line, map the pixels to millivolts, and save the digital signal.} We run this same pipeline for each of the three methods so the comparison is fair.
+
+\section{Experiments}
+\textit{Purpose: describe the setup you used to test the method.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item The dataset, the benchmark, and the \textcolor{cResult}{metric} you measure.
+\item The baselines you compare against.
+\item How you split the data. This is the plan, not the numbers yet.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+
+We use the PhysioNet 2024 benchmark. The metric is \textcolor{cResult}{SNR in dB}, where higher is better. We compare three methods, called A, B, and C. We split the images into five damage groups: clean scan, creases, shadow, ink smudge, and low resolution.
+
+\section{Results}
+\textit{Purpose: report what the numbers say, with no opinion yet.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item The \textcolor{cResult}{results} in clear tables, grouped the way you planned.
+\item A direct answer to your question, backed by the numbers.
+\end{itemize}
+
+\fbox{\textbf{ECG example}} \textbf{Table: example SNR in dB, higher is better. Numbers are illustrative.}
+
+\begin{tabular}{lccc}
+\toprule
+\textbf{Damage type} & \textbf{Method A} & \textbf{Method B} & \textbf{Method C} \\
+\midrule
+Clean scan & 24.8 & 24.1 & 22.0 \\
+Creases & 18.2 & 20.4 & 15.1 \\
+Shadow & 16.7 & 19.9 & 14.0 \\
+Ink smudge & 12.1 & 17.6 & 10.5 \\
+Low resolution & 21.3 & 20.0 & 19.2 \\
+\bottomrule
+\end{tabular}
+
+\textcolor{cResult}{Method B gives the highest SNR on creases, shadow, and ink smudge. Method A wins on clean scans and low resolution.}
+
+\section{Discussion}
+\textit{Purpose: explain what the results mean and why.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item Read the \textcolor{cResult}{result} and say what it tells us.
+\item Link back to the \textcolor{cGap}{gap} and your question.
+\item Say when the method works well and when it does not.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+
+\textcolor{cResult}{The best method depends on the type of damage.} This \textcolor{cGap}{answers the gap directly}: one overall score hides these swings and can point a user to the wrong method for their damaged scans.
+
+\section{Limitations}
+\textit{Purpose: say honestly what your work does not cover.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item Where the \textcolor{cMethod}{method} breaks or was not tested.
+\item Limits of the data and the setup. Be specific and honest.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+
+We test five damage types on one benchmark only. \textcolor{cProblem}{We do not test images that carry two kinds of damage at the same time,} so mixed damage is still an open case.
+
+\section{Conclusion}
+\textit{Purpose: wrap up in a few lines and point forward.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item Restate the \textcolor{cProblem}{problem} and the main \textcolor{cResult}{result} in short.
+\item One line on useful future work.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+
+\textcolor{cProblem}{Damaged ECG scans are hard to digitize.} \textcolor{cResult}{We showed that the best method changes with the type of damage.} Future work should test mixed damage and add more methods.
+
+\section{References}
+\textit{Purpose: list every source you cited, in one steady style.}
+
+\fbox{\textbf{What to put here}}
+\begin{itemize}
+\item A full citation for each work: authors, title, venue, and year.
+\item Use the same style for all entries. List only sources you actually cited.
+\item Use the url command for web links so they stay clickable.
+\end{itemize}
+
+\fbox{\textbf{ECG example}}
+\begin{itemize}
+\item PhysioNet 2024 Challenge. Digitization of ECG images. 2024. \url{https://physionet.org}
+\item A. Author, B. Author. Deep ECG signal recovery from paper scans. Journal of Biomedical Signals, 2023.
+\end{itemize}
+
+\end{document}
