@@ -8,7 +8,7 @@
 
 A free, beginner-friendly research series for students who want to move from reading papers to finding gaps, asking research questions, and writing their first paper.
 
-![Sessions](https://img.shields.io/badge/sessions-4-8B1A1A)
+![Sessions](https://img.shields.io/badge/sessions-5-8B1A1A)
 ![Language](https://img.shields.io/badge/language-Urdu-1A1A18)
 ![For](https://img.shields.io/badge/for-beginners-2E7D32)
 ![Slides](https://img.shields.io/badge/slides-free%20to%20use-555)
@@ -51,6 +51,7 @@ If you are new, follow the sessions in order:
 | 03 | **Is Your Gap Real? Finding and Validating a Research Gap** | Where ideas come from, narrowing, Google Scholar, AI sweep, verifying papers, gap validation | 3 Jul 2026 | [Video](https://youtu.be/lGJdD1jZDdo) | [PPTX](sessions/03-is-your-gap-real/session-3-slides.pptx) | [Read](sessions/03-is-your-gap-real/) |
 | 04 | **Planning Your Paper: Structure and Experiment Plan** | Paper structure, literature review, abstract, introduction, methodology vs experiments, data leakage, metrics, ablation, ORCID, LaTeX | 11 Jul 2026 | [Video](https://youtu.be/ln9pncI2niw) | [PPTX](sessions/04-planning-your-paper/session-4-slides.pptx) | [Read](sessions/04-planning-your-paper/) |
 | 4.1 | **Introduction to LaTeX** (volunteer session by Naima Yaqub) | Overleaf, document structure, formatting, tables and booktabs, figures, math with amsmath, references, troubleshooting | 12 Jul 2026 | [Video](https://youtu.be/2XXJIIBPfok) | [PPTX](sessions/4.1-intro-to-latex/session-4.1-slides.pptx) | [Read](sessions/4.1-intro-to-latex/) |
+| 05 | **Running Your First Experiment: From Plan to Results** | Baselines, reading a failure, step by step improvement, ablation studies, learning from winners, saving outputs, smoke tests | 18 Jul 2026 | [Video](https://youtu.be/-VfKmHZJ5I0) | [PPTX](sessions/05-running-your-first-experiment/session-5-slides.pptx) | [Read](sessions/05-running-your-first-experiment/) |
 
 More sessions are on the way. Star the repo to stay updated.
 
