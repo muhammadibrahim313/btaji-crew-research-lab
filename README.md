@@ -8,7 +8,7 @@
 
 A free, beginner-friendly research series for students who want to move from reading papers to finding gaps, asking research questions, and writing their first paper.
 
-![Sessions](https://img.shields.io/badge/sessions-5-8B1A1A)
+![Sessions](https://img.shields.io/badge/sessions-6-8B1A1A)
 ![Language](https://img.shields.io/badge/language-Urdu-1A1A18)
 ![For](https://img.shields.io/badge/for-beginners-2E7D32)
 ![Slides](https://img.shields.io/badge/slides-free%20to%20use-555)
@@ -46,12 +46,13 @@ If you are new, follow the sessions in order:
 
 | # | Session | Focus | Date | Watch | Slides | Notes |
 |:-:|---------|-------|:----:|:-----:|:------:|:-----:|
-| 01 | **What Research Is and How to Read a Paper** | Research mindset, paper reading, limitations vs gaps | 21 Jun 2026 | [Video](https://youtu.be/IMJx7ECaIEk) | [PDF](sessions/01-first-research-paper/session-1-slides.pdf) | [Read](sessions/01-first-research-paper/) |
-| 02 | **Finding Your Gap, Literature Review, and Research Question** | Idea, hypothesis, literature review, gap, research question | 27 Jun 2026 | [Video](https://www.youtube.com/watch?v=fiJni4jwVuo&list=PLJPlXj5tLhiE&index=6) | [PDF](sessions/02-finding-research-gap/session-2-slides.pdf) | [Read](sessions/02-finding-research-gap/) |
-| 03 | **Is Your Gap Real? Finding and Validating a Research Gap** | Where ideas come from, narrowing, Google Scholar, AI sweep, verifying papers, gap validation | 3 Jul 2026 | [Video](https://youtu.be/lGJdD1jZDdo) | [PPTX](sessions/03-is-your-gap-real/session-3-slides.pptx) | [Read](sessions/03-is-your-gap-real/) |
-| 04 | **Planning Your Paper: Structure and Experiment Plan** | Paper structure, literature review, abstract, introduction, methodology vs experiments, data leakage, metrics, ablation, ORCID, LaTeX | 11 Jul 2026 | [Video](https://youtu.be/ln9pncI2niw) | [PPTX](sessions/04-planning-your-paper/session-4-slides.pptx) | [Read](sessions/04-planning-your-paper/) |
-| 4.1 | **Introduction to LaTeX** (volunteer session by Naima Yaqub) | Overleaf, document structure, formatting, tables and booktabs, figures, math with amsmath, references, troubleshooting | 12 Jul 2026 | [Video](https://youtu.be/2XXJIIBPfok) | [PPTX](sessions/4.1-intro-to-latex/session-4.1-slides.pptx) | [Read](sessions/4.1-intro-to-latex/) |
-| 05 | **Running Your First Experiment: From Plan to Results** | Baselines, reading a failure, step by step improvement, ablation studies, learning from winners, saving outputs, smoke tests | 18 Jul 2026 | [Video](https://youtu.be/-VfKmHZJ5I0) | [PPTX](sessions/05-running-your-first-experiment/session-5-slides.pptx) | [Read](sessions/05-running-your-first-experiment/) |
+| 01 | **What Research Is and How to Read a Paper** | Research mindset, paper reading, limitations vs gaps | 21 Jun 2026 | [Video](https://youtu.be/IMJx7ECaIEk) | [PDF](01-first-research-paper/session-1-slides.pdf) | [Read](01-first-research-paper/) |
+| 02 | **Finding Your Gap, Literature Review, and Research Question** | Idea, hypothesis, literature review, gap, research question | 27 Jun 2026 | [Video](https://www.youtube.com/watch?v=fiJni4jwVuo&list=PLJPlXj5tLhiE&index=6) | [PDF](02-finding-research-gap/session-2-slides.pdf) | [Read](02-finding-research-gap/) |
+| 03 | **Is Your Gap Real? Finding and Validating a Research Gap** | Where ideas come from, narrowing, Google Scholar, AI sweep, verifying papers, gap validation | 3 Jul 2026 | [Video](https://youtu.be/lGJdD1jZDdo) | [PPTX](03-is-your-gap-real/session-3-slides.pptx) | [Read](03-is-your-gap-real/) |
+| 04 | **Planning Your Paper: Structure and Experiment Plan** | Paper structure, literature review, abstract, introduction, methodology vs experiments, data leakage, metrics, ablation, ORCID, LaTeX | 11 Jul 2026 | [Video](https://youtu.be/ln9pncI2niw) | [PPTX](04-planning-your-paper/session-4-slides.pptx) | [Read](04-planning-your-paper/) |
+| 4.1 | **Introduction to LaTeX** (volunteer session by Naima Yaqub) | Overleaf, document structure, formatting, tables and booktabs, figures, math with amsmath, references, troubleshooting | 12 Jul 2026 | [Video](https://youtu.be/2XXJIIBPfok) | [PPTX](4.1-intro-to-latex/session-4.1-slides.pptx) | [Read](4.1-intro-to-latex/) |
+| 05 | **Running Your First Experiment: From Plan to Results** | Baselines, reading a failure, step by step improvement, ablation studies, learning from winners, saving outputs, smoke tests | 18 Jul 2026 | [Video](https://youtu.be/-VfKmHZJ5I0) | [PPTX](05-running-your-first-experiment/session-5-slides.pptx) | [Read](05-running-your-first-experiment/) |
+| 06 | **Publishing Your Research: From Preprint to Journal** | Key terms, preprints, conferences and workshops, journals and indexing, metrics and quartiles, open access and APCs, HEC W/X/Y, choosing a route, predatory venues, authorship, next steps | 26 Jul 2026 | [Video](https://youtu.be/vVOQ_LU0WZc) | [PPTX](06-publishing-your-research/session-6-slides.pptx) | [Read](06-publishing-your-research/) |
 
 More sessions are on the way. Star the repo to stay updated.
 
@@ -73,7 +74,7 @@ Guest hosts may join for future sessions.
 
 ## How To Use This Repo
 
-- Open a session folder under `sessions/`.
+- Open a numbered session folder in the repo root (for example `01-first-research-paper/`).
 - Watch the recording.
 - Download the slides.
 - Read the notes and timeline.
