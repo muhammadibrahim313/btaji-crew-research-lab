@@ -44,6 +44,18 @@ If you are new, follow the sessions in order:
 
 ## Sessions
 
+<div align="center">
+
+<a href="https://youtube.com/playlist?list=PLJPlXj5tLhiE&si=0679eGl6FdBYb1lH">
+<img src="assets/social/linkedin-research-journey-sessions-1-6.png" alt="How to Write Your First Research Paper - BTAJI Crew Research Lab Sessions 1 to 6" width="100%">
+</a>
+
+<sub><b>Follow the complete journey:</b> read a paper, find and validate a gap, plan your study, run the experiment, and publish your research. <a href="https://youtube.com/playlist?list=PLJPlXj5tLhiE&si=0679eGl6FdBYb1lH">Watch the free playlist</a>.</sub>
+
+</div>
+
+<br>
+
 | # | Session | Focus | Date | Watch | Slides | Notes |
 |:-:|---------|-------|:----:|:-----:|:------:|:-----:|
 | 01 | **What Research Is and How to Read a Paper** | Research mindset, paper reading, limitations vs gaps | 21 Jun 2026 | [Video](https://youtu.be/IMJx7ECaIEk) | [PDF](01-first-research-paper/session-1-slides.pdf) | [Read](01-first-research-paper/) |
