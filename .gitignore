@@ -26,6 +26,9 @@ youtube-upload/
 temp/
 tmp/
 
+# Private paper upload bundle (kept local, not published)
+preprints-org/
+
 *.mp4
 *.mov
 *.m4v
